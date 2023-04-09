@@ -48,14 +48,14 @@ library(corrplot)
 setwd("./")
 
 #Import csv
-url <- "https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/aggregated_4data.csv"
-cardio_train_url <- "https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/cardio_train.csv"
-diabetes_url <- "https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/diabetes.csv"
+url <- "https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/aggregated_4data.csv"
+cardio_train_url <- "https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/cardio_train.csv"
+diabetes_url <- "https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/diabetes.csv"
 
-#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/processed.cleveland.csv
-#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/processed.hungarian.csv
-#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/processed.switzerland.csv
-#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/processed.va.csv
+#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/processed.cleveland.csv
+#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/processed.hungarian.csv
+#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/processed.switzerland.csv
+#https://raw.githubusercontent.com/howry423/Dataset-Analysis-with-R/main/Cardiovascular%20Disease/processed.va.csv
 
 fourdata.dt <- fread(url)
 kaggledata.dt <- fread(cardio_train_url)

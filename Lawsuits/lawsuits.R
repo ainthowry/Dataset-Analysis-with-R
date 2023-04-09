@@ -26,7 +26,7 @@ library(grid)
 setwd("./")
 
 # Import csv
-url <- "https://raw.githubusercontent.com/howry423/t7hw1re6013/main/Lawsuit.csv"
+url <- "https://raw.githubusercontent.com/ainthowry/Dataset-Analysis-with-R/main/Lawsuits/Lawsuit.csv"
 lawsuit.dt <- fread(url)
 sprintf("Data downloaded from %s!", url)
 head(lawsuit.dt, 2)
