@@ -74,7 +74,6 @@ sprintf("diabetes.dt is from Kaggle containing %s entries and %s data attributes
 # Data Processing
 
 # process the data
-# TODO: PLS CHECK -> ASSUME ALL COLUMNS USING AN INTEGER IS CATEGORICAL DATA
 fourdata.dt <- fourdata.dt[, lapply(.SD, function(x) if(is.integer(x)) as.factor(x) else x)]
 kaggledata.dt <- kaggledata.dt[, lapply(.SD, function(x) if(is.integer(x)) as.factor(x) else x)]
 diabetes.dt <- diabetes.dt[, lapply(.SD, function(x) if(is.integer(x)) as.factor(x) else x)]
@@ -196,9 +195,9 @@ cardio_count / sum(cardio_count) # normalizing the table
 
 ### Findings 2
 
-- generally, CVD patients have higher systolic and diastolic blood pressures
-- there is a 62.8% correlation between systolic and diastolic blood pressures, this means that generally when systolic pressure increases, diastolic pressure increases as well
-- 80.2% of the patients with CVD have higher than average blood pressures
+# - generally, CVD patients have higher systolic and diastolic blood pressures
+# - there is a 62.8% correlation between systolic and diastolic blood pressures, this means that generally when systolic pressure increases, diastolic pressure increases as well
+# - 80.2% of the patients with CVD have higher than average blood pressures
 
 ### Visualization 3: exploring other categorical columns based on cardiovascular presence
 
@@ -265,11 +264,11 @@ ggplot(data=kaggledata.dt, aes(x=active, fill=cardio)) +
 
 ### Findings 3
 
-- the dataset has 45530 females and 24470 males. about 50% of each gender has cardiovascular disease
-- cholesterol level is a huge determinant of whether the patients have cardiovascular disease. it can be seen that there is 27.2% more healthy patients than CVD patients with normal cholesterol level, while there is 51.4% more CVD patients than healthy ones with above normal cholesterol level and 226.3% with well above cholesterol level.
-- gluclose level is also another huge determinant of whether patients have cardiovascular disease. 8.08%, 45.7%, 64.6%
-- there are more inactive patients with CVD compared to inactive patients without CVD (15.4%), while active patients without CVD is 3.71% more than active patients with CVD. This means that while exercising and maintaining an active lifestyle is good, it does not necessarily mean that you are less likely to have CVD
-- smoking and alcohol consumption does not seem to have an adverse effect on whether the patients have CVD or not
+# - the dataset has 45530 females and 24470 males. about 50% of each gender has cardiovascular disease
+# - cholesterol level is a huge determinant of whether the patients have cardiovascular disease. it can be seen that there is 27.2% more healthy patients than CVD patients with normal cholesterol level, while there is 51.4% more CVD patients than healthy ones with above normal cholesterol level and 226.3% with well above cholesterol level.
+# - gluclose level is also another huge determinant of whether patients have cardiovascular disease. 8.08%, 45.7%, 64.6%
+# - there are more inactive patients with CVD compared to inactive patients without CVD (15.4%), while active patients without CVD is 3.71% more than active patients with CVD. This means that while exercising and maintaining an active lifestyle is good, it does not necessarily mean that you are less likely to have CVD
+# - smoking and alcohol consumption does not seem to have an adverse effect on whether the patients have CVD or not
 
 
 names(fourdata.dt)
